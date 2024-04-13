@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intern ID Verification System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Internship ID Verification</h1>
+    <div class="verification-section">
+      <input type="text" id="internId" placeholder="Enter Internship ID...">
+      <button onclick="verifyInternId()">Verify</button>
+    </div>
+    <div id="verificationResult" class="result">
+      <img id="validImg" src="img/check.png" alt="Checkmark" style="display: none;">
+      <img id="invalidImg" src="img/cross.png" alt="Cross" style="display: none;">
+      <p id="resultText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.verification-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.result.valid {
+  color: #83eb9b;
+}
+
+.result.invalid {
+  color: #f7969f;
+}
+#validImg{
+  width: 30px;
+}
+#invalidImg{
+  width: 30px;
+}
+
+/* Your existing CSS styles */
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+#validImg.fadeInOut {
+  width: 30px;
+  animation: fadeInOut 1s ease-in-out infinite; /* Play continuously */
+}
+
+#invalidImg.fadeInOut {
+  width: 30px;
+  animation: fadeInOut 1s ease-in-out infinite; /* Play continuously */
+}
+
+/* Additional animations for more attractiveness */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+#validImg {
+  animation: fadeInOut 1s ease-in-out infinite, bounce 1s ease-in-out infinite, rotate 2s linear infinite, pulse 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; /* Combine animations */
+}
+
+#invalidImg {
+  animation: fadeInOut 1s ease-in-out infinite, bounce 1s ease-in-out infinite, rotate -2s linear infinite, pulse 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; /* Reverse rotation for cross image */
+}
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #f5f5f5; /* Initial background color */
+  }
+  50% {
+    background-color: #cdfcea; /* Intermediate background color */
+  }
+  100% {
+    background-color: #f5f5f5; /* Final background color */
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: changeBackgroundColor 5s ease-in-out infinite; /* Apply the animation */
+}
